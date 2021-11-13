@@ -5,17 +5,21 @@ const bcrypt = require("bcrypt");
 
 //UPDATE
 router.put("/:id", async (req, res) => {
-   console.log(req.body)
+   //console.log(req.body)
   if (req.body.userId === req.params.id) {
     if (req.body.password) {
       const salt = await bcrypt.genSalt(10);
       req.body.password = await bcrypt.hash(req.body.password, salt);
     }
     try {
+      console.log(req.body);
+      const check = JSON.parse(JSON.stringify(req.body),
+      (key, value) => value === null || value === '' ? undefined : value);
+      console.log(check);
       const updatedUser = await User.findByIdAndUpdate(
         req.params.id,
         {
-          $set: req.body,
+          $set: check,
         },
         { new: true }
       );
