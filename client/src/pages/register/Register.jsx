@@ -38,6 +38,7 @@ export default function Register() {
         <input
           type="text"
           className="registerInput"
+          pattern="/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/"
           placeholder="Enter your email..."
           onChange={(e) => setEmail(e.target.value)}
         />
@@ -45,6 +46,7 @@ export default function Register() {
         <input
           type="password"
           className="registerInput"
+          pattern="/^.{8,}$/"
           placeholder="Enter your password..."
           onChange={(e) => setPassword(e.target.value)}
         />

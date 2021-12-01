@@ -12,10 +12,10 @@ router.put("/:id", async (req, res) => {
       req.body.password = await bcrypt.hash(req.body.password, salt);
     }
     try {
-      console.log(req.body);
+      //console.log(req.body);
       const check = JSON.parse(JSON.stringify(req.body),
       (key, value) => value === null || value === '' ? undefined : value);
-      console.log(check);
+      //console.log(check);
       const updatedUser = await User.findByIdAndUpdate(
         req.params.id,
         {

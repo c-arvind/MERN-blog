@@ -18,11 +18,11 @@ export default function Sidebar() {
       <div className="sidebarItem">
         <span className="sidebarTitle">ABOUT ME</span>
         <img
-          src="https://i.imgur.com/GFNJLGC.jpeg"
+          src="https://i.imgur.com/ZfDXcKk.jpeg"
           alt=""
         />
         <p>
-          I love anime, basketball, video games (VALO GANG WYA). I usually code in python but i can be swayed by cash cash
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
         </p>
       </div>
       <div className="sidebarItem">
